@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Recyclerview</string>
+    <string name="name_noo">Noo Phước Thịnh</string>
+    <string name="name_haho">Hồ Ngọc Hà</string>
+    <string name="name_chidan">Chi Dân</string>
+    <string name="name_selena">Selena Gomez</string>
+    <string name="name_charlie">Charlie Puth</string>
+    <string name="name_yeon">Yeon</string>Yeon
+    <string name="name_thuychi">Thùy Chi</string>
+    <string name="name_hoavinh">Hoa Vinh</string>
+    <string name="name_mrdam">Đàm Vĩnh Hưng</string>
 </resources>

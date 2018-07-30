@@ -14,11 +14,15 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentA extends Fragment implements ArtistAdapter.ItemArtistLisener{
+public class FragmentArtist extends Fragment implements ArtistAdapter.ItemArtistLisener{
     private List<ItemArtist> mList_Artist;
     private RecyclerView mRecyclerView;
     private ArtistAdapter mAdapter;
     private ISwitchFragment mInter;
+
+    public void setmInter(ISwitchFragment mInter) {
+        this.mInter = mInter;
+    }
 
     @Nullable
     @Override
@@ -64,8 +68,9 @@ public class FragmentA extends Fragment implements ArtistAdapter.ItemArtistLisen
 
     @Override
     public void onClickItem(int position) {
-        Toast.makeText(this.getContext(), ""+mList_Artist.get(position).getmName(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this.getContext(), ""+mList_Artist.get(position).getmName(), Toast.LENGTH_SHORT).show();
 
+        mInter.switchfragment(mList_Artist.get(position));
     }
 
     @Override
@@ -78,7 +83,7 @@ public class FragmentA extends Fragment implements ArtistAdapter.ItemArtistLisen
         return mList_Artist.get(position);
     }
     public interface ISwitchFragment{
-        void switchfragment();
+        void switchfragment(ItemArtist item);
 
     }
 
